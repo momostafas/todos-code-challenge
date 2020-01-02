@@ -10,7 +10,7 @@
   "dependencies": {
     "vue": "^2.5.17",
     "vue-types": "^1.3.3",
-    "vuetify": "^1.0.19",
+    "vuetify": "^2.0.1",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
