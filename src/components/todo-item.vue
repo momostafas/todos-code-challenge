@@ -4,6 +4,8 @@
       <div>
         <h3 class="headline mb-0">Title</h3>
       </div>
+      <v-spacer />
+      <v-btn text>edit </v-btn>
     </v-card-title>
     <v-btn>
       Complete
