@@ -1,8 +1,8 @@
 <template lang="html">
   <div>
     <div 
-      v-for="(todo, index) in todos" 
-      :key="index">
+      v-for="todo in todos" 
+      :key="todo.id">
       <TodoItem 
         :todo="todo" 
         class="mb-3" />
