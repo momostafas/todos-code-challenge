@@ -1,6 +1,12 @@
 <template lang="html">
   <div>
-    <TodoItem v-for="todo in todos" class="mb-3" />
+    <div 
+      v-for="(todo, index) in todos" 
+      :key="index">
+      <TodoItem 
+        :todo="todo" 
+        class="mb-3" />
+    </div>
   </div>
 </template>
 
@@ -8,14 +14,17 @@
 import TodoItem from '@/components/todo-item';
 
 export default {
-  components: {
-    TodoItem,
-  },
-  computed: {
-    todos(){
-      return this.$store.state.todos
+    components: {
+        TodoItem,
+    },
+    computed: {
+        /**
+         * Get todo tasks from vuex store getters sorted from done to not done.
+         */
+        todos() {
+            return this.$store.getters.sortedTodos;
+        }
     }
-  }
 }
 </script>
 
