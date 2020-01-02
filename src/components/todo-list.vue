@@ -1,7 +1,6 @@
 <template lang="html">
   <div>
-    <TodoItem class="mb-3" />
-    <TodoItem class="mb-3"/>
+    <TodoItem v-for="todo in todos" class="mb-3" />
   </div>
 </template>
 
@@ -11,6 +10,11 @@ import TodoItem from '@/components/todo-item';
 export default {
   components: {
     TodoItem,
+  },
+  computed: {
+    todos(){
+      return this.$store.state.todos
+    }
   }
 }
 </script>
